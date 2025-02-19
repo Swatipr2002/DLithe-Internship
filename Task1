@@ -1,0 +1,26 @@
+void setup() {
+  pinMode(42,OUTPUT);
+  pinMode(6,OUTPUT);
+  pinMode(5,OUTPUT);
+  Serial.begin(9600);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+digitalWrite(42, HIGH);
+Serial.println("LED is turn ON ");
+digitalWrite(6, LOW);
+Serial.println("Buzzer is turn OFF ");
+digitalWrite(5, LOW);
+Serial.println("Relay is turn OFF ");
+delay(1000);
+
+digitalWrite(42, LOW);
+Serial.println("LED is turn OFF");
+digitalWrite(6, HIGH);
+Serial.println("Buzzer is turn ON ");
+digitalWrite(5, HIGH);
+Serial.println("Relay is turn ON ");
+delay(1000);
+}
